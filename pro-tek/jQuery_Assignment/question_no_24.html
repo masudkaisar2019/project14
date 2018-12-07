@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 24</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        #password_field{
+            float: left;
+            width: 200px;
+            border: 2px solid blue;
+        }
+        #showmsg{
+            float: left;
+            margin-left: 20px;
+            border-radius: 5px;
+            width: 200px;
+            height: 150px;
+            border: 2px solid rgb(153, 211, 238);
+            background-color: rgb(198, 233, 238);
+            text-align: center;
+            padding: 0px;
+        }
+        #mainpsw{
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        img{
+            height: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1> Password Strength Indicator: Make a input password field, next to it should be a container as shown below:
+
+    </h1>
+
+    <div id="psw">
+        <div id="password_field">
+            <p id="passwordtext"> Password:</p>
+            <input id="mainpsw" type="password" placeholder="Please enter at least 9 char.">
+        </div>
+        
+
+        <div id="showmsg">
+            <P>Password Critaria</P>
+            <p>
+                <img  id="img1" src="images/wrong.png" alt=""> Must be at least 9 charecters.</p>
+            <p>
+                <img  id="img2" src="images/wrong.png" alt=""> Must contain an upper case latter and a number.</p>
+        </div>
+       
+
+    </div>
+
+    <div id="psw">
+        <div id="password_field">
+            <p id="passwordtext"> Conferm Password:</p>
+            <input id="confirmpsw" type="password" placeholder="Please enter at least 9 char.">
+            <p id="conpswmsg"></p>
+        </div>
+    
+    </div>
+
+    
+
+    <script>
+       var pswvalue;
+        $("#mainpsw").keyup( function () {
+            passWordValue = $('#mainpsw').val();
+            var uppercase = new RegExp(/[A-Z]+/);
+            // var uppercase = new RegExp(/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{9,}$"/)
+            // var lowercase = new RegExp(/[a-z]+/);
+            var number = new RegExp(/[0-9]+/);
+            if ((uppercase.test(passWordValue)) && (number.test(passWordValue))) {
+                $('#img2').attr('src', "images/correct.png");
+
+            } else {
+                $('#img2').attr('src', "images/wrong.png");
+            }
+      
+            if (passWordValue.length > 9) {
+                $('#img1').attr('src', "images/correct.png");
+            } else {
+                $('#img1').attr('src', "images/wrong.png");
+            }
+            // if(passWordValue == '' ){
+            //  $('#img2').attr('src', "images/wrong.png");
+            // }else{
+            //     $('#img2').attr('src', "images/correct.png");
+            // }
+
+        });
+
+    
+
+        $("#confirmpsw").on("keyup", function () {
+            var conpswvalue = $('#confirmpsw').val();
+            if (conpswvalue == passWordValue) {
+                $("#conpswmsg").html("Password match");
+            } else {
+                $("#conpswmsg").html("Password doesn't match");
+                $("#conpswmsg").css('color','green');
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>

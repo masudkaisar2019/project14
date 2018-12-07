@@ -1,0 +1,59 @@
+body{
+    background-image: url(background.png);
+    display: block;
+}
+.nav{
+    margin-left: 250px;
+    color: white;
+    font-size: 20px;
+}
+.nav ul{
+    margin-top: 50px;
+}
+li{
+    display: inline;
+    padding: 50px;
+    text-align: center;
+    
+}
+.main-body1{
+    border: 10px solid white;
+    height: 500px;
+    width: 600px;
+/*    margin-left: 150px;*/
+    /*margin-top: px;*/
+    background-image: url(anoceanofsky.jpg);
+    
+}
+
+.main-body1 h2{
+    color: white;
+    margin-left: 40px;
+}
+.main-body1 p{
+    color: cadetblue;
+    margin-left: 50px;
+    margin-top: -10px;
+}
+
+.main-body2{
+   border: 10px solid white;
+    height: 500px;
+    width: 600px;
+/*    margin-left: 150px;*/
+    margin-top: 60px;
+    background-image: url(content_back.png);
+}
+.main-body2 h3 {
+   margin-left: 20px;
+}
+.main-body2 p {
+   margin-left: 20px;
+}
+
+footer{
+    background-image: url(footer.png);
+    background-repeat: no-repeat;
+    border: 5px solid white;
+    color: white
+}

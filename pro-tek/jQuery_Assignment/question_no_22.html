@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 22</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        #main_div{
+            border: 1px solid gray;
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            margin: auto;
+            margin-top: 50px;
+        }
+        li{
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>The structure of the html is like this: BODY DIVUL LISpan
+    <!-- <a href=”resume.pdf”>Download Resume.Pdf</a> -->
+    LISpan
+    <!-- <a href=”resume.docx”>Download Resume.docx</a> -->
+    LISpan
+    <!-- <a href=”portfolio.pdf”>Download Portfolio.pdf</a> -->
+    And so on…. On document load, an appropriate icon should be inserted before the anchor tag text. Download the icons from
+    internet.</h1>
+
+    <div id="main_div">
+        <ul>
+
+            <li>
+                <a class="pdf" href="#">Download Resume.Pdf</a>
+            </li>
+            <li>
+                <a class= "doc" href="#">Download Resume.docx</a>
+            </li>
+            <li>
+                <a class="pdf" href="#">Download Resume.Pdf</a>
+            </li>
+            <li>
+                <a class="pdf" href="#">Download Resume.Pdf</a>
+            </li>
+            <li>
+                <a class="doc" href="#">Download Resume.docx</a>
+            </li>
+        </ul>
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+              $("<img class='pdfImg' src= 'images/pdf.png'>").insertBefore(".pdf");
+              $('.pdfImg').css('height','60px');
+               $("<img class='docImg' src= 'images/doc.png'>").insertBefore(".doc");
+               $('.docImg').css('height', '40px');
+
+        })
+
+    </script>
+</body>
+
+</html>

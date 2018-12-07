@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css flexbox</title>
+    
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: blue;
+            flex-direction:row-reverse;
+            flex-wrap:nowrap;
+            flex-flow: row wrap;
+/*            justify-content:space-between;*/
+            align-items:center;
+            align-content:stretch;
+            justify-content:center;
+        }
+        .flex-container >div{
+            background-color: red;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+   <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex:0 0 200px;">3</div>
+    <div>4</div>
+    <div>5</div>
+    <div style="align-self:flex-end">6</div>
+    <div style="align-self: flex-start">7</div>
+    <div>8</div>
+</div>
+</body>
+</html>

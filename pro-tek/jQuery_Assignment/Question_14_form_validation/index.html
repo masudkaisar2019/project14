@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Form Validation</title>
+    <link rel="stylesheet" href="form_style.css">
+    <!-- <style>
+        body{
+            background-color: gray;
+        }
+        #main_div{
+            height: 500px;
+            width: 400px;
+            border: 2px solid blue;
+            background-color: cyan;
+            margin: auto;
+            margin-left: 400px;
+            position: absolute;
+
+        }
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        .change{
+            background-color: yellow;
+            color: red;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <div id="main_div">
+        <h2>Form validation in jquery</h2>
+        First name: <input type="text" name="FName" value="" placeholder="Enter your First Name" id="fname"><br>
+        Last name: <input type="text" name="LName" value="" placeholder="Enter your last Name" id="lname"> <br> <hr>
+        Email Address: <input type= "email" name="email" value="" placeholder="Enter your email address">
+
+
+    </div> -->
+    <div class="main">
+    <h1>Form Validation Using jQuery</h1>
+    <div id="form">
+        <p id="head"></p>
+        <!-- This Segment Displays The Validation Rule -->
+        <h2>Java script form validation</h2>
+        <form action="" method="post">
+            <!-- Form Starts From Here -->
+            <label>Full Name:</label>
+            <input id='firstname' type='text'>
+            <p id="p1"></p>
+            <!--This Segment Displays The Validation Rule For Name-->
+            <label>Username(6-8 characters):</label>
+            <input id='username' type='text'>
+            <p id="p2"></p>
+            <!-- This Segment Displays The Validation Rule For User Name -->
+            <label>Email:</label>
+            <input id='email' type='text'>
+            <p id="p3"></p>
+            <!-- This Segment Displays The Validation Rule For Email -->
+            <label>State:</label>
+            <select id='state'>
+                <option>Please Choose</option>
+                <option>America</option>
+                <option>Australia</option>
+                <option>Sweden</option>
+                <option>Africa</option>
+            </select>
+            <p id="p4"></p>
+            <!-- This Segment Displays The Validation Rule For Selection -->
+            <label>Address:</label>
+            <input id='addr' type='text'>
+            <p id="p5"></p>
+            <!-- This Segment Displays The Validation Rule For Address -->
+            <label>Zip Code:</label>
+            <input id='zip' type='text'>
+            <p id="p6"></p>
+            <!-- This Segment Displays The Validation Rule For Zip -->
+            <button id="submit">Check Form</button>
+        </form>
+    </div>
+    </div>
+    
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery_form.js"></script>
+</body>
+</html>

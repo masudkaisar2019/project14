@@ -1,0 +1,95 @@
+<!-- no: 18:There is a div with id=”main” and it contains a table as follows. When you click on the delete button, it should delete the
+whole row. [Hint use $(this), and jquery DOM methods]
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 17</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #main_div{
+            margin: auto;
+            margin-top: 200px;
+            width: 300px;
+        }
+        thead{
+            background-color:limegreen;
+        }
+        tbody{
+            background-color: lightgray;
+        }
+        tbody .remove{
+            background-color:whitesmoke;
+        }
+    </style>
+  
+</head>
+
+<body>
+    
+    <div id="main_div">
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                    <th>Zip Code</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jhon</td>
+                    <td>23</td>
+                    <td>LA</td>
+                    <td>90027</td>
+                    <td class="remove">delete</td>
+                </tr>
+                <tr>
+                    <td>doe</td>
+                    <td>25</td>
+                    <td>CA</td>
+                    <td>90027</td>
+                    <td class="remove">delete</td>
+                </tr>
+                <tr>
+                    <td>Masud</td>
+                    <td>29</td>
+                    <td>FL</td>
+                    <td>33020</td>
+                    <td class="remove">delete</td>
+                </tr>
+                <tr>
+                    <td>Kaisar</td>
+                    <td>27</td>
+                    <td>MA</td>
+                    <td>33333</td>
+                    <td class="remove">delete</td>
+                </tr>
+                <tr>
+                    <td>Jhon</td>
+                    <td>23</td>
+                    <td>LA</td>
+                    <td>90027</td>
+                    <td class="remove">delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+
+    <script>
+        $('.remove').click(function(){
+            $(this).parent('tr').remove();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 24</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        #update{
+            margin: auto;
+            margin-top: 100px;
+            background-color:rgb(133, 197, 214);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            padding-top: 30px;
+           
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <h1> Create a JSON file with Customer Information (each customer should have name, age and zipcode) in it. Make AJAX call to
+    get data from a JSON file and display the data in list item like this:
+    </h1>
+
+    <div id="update"></div>
+  
+
+    <script>
+        
+           $.getJSON('data.json', function (data) {
+                // console.log(data);
+                var output = '<ul>';
+                $.each(data, function (key, val) {
+                    output += '<li style= "list-style: none">' + val.name + "   is "+ val.age+" years old and he lives in " + val.Zipcode+" zipcode" + '</li>';
+                });
+                output += '</ul>';
+                $('#update').html(output);
+            });
+    </script>
+</body>
+
+</html>

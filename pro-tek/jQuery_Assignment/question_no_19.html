@@ -1,0 +1,93 @@
+<!-- no: 18:There is a div with id=”main” and it contains a table as follows. When you click on the delete button, it should delete the
+whole row. [Hint use $(this), and jquery DOM methods]
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 17</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color:lightgray;
+        }
+        li{
+            list-style: none;
+        }
+        #myFormDiv{
+            background-color: rgb(25, 173, 136);
+            color: white;
+            color: antiquewhite;
+            width: 500px;
+            margin: auto;
+            margin-top: 200px;
+            border: 2px solid rgb(19, 17, 17);
+        }
+
+    </style>
+    
+
+</head>
+
+<body>
+    <h1>Write JQUERY Code. There is a div that contains several input fields (text field, checkboxes, radio,etc). When you click
+    on the checkboxes, show the span that is immediately after checkbox. See the structure for better understanding:
+    
+</h1>
+<div id='myFormDiv'>
+    <ul>
+        <li>
+            <input type='checkbox'/> One
+            <span>this is a checkbox </span>
+        </li>
+         <li>
+            <input type='checkbox'/> One
+            <span>this is a checkbox </span>
+        </li>
+        <li>
+            <input type='checkbox'/> One
+            <span>this is a checkbox</span>
+        </li>
+        <li>
+            <input type='text'/> One
+            <span>this is a textfield </span>
+        </li>
+        <li>
+            <input type='text'/> One
+            <span>this is a textfield </span>
+        </li>
+        <li>
+            <label>One</label>
+            <input type='radio'/>
+            <span>this is a Radio </span>
+        </li>
+        <li>
+            <label>Two</label>
+            <input type='radio'/>
+            <span>this is a Radio </span>
+        </li> 
+    </ul>
+
+
+    <script>
+       $(document).ready(function(){
+           $('span').hide();
+           $('input').click(function(){
+            //    console.log(this);
+               $(this).next().show('span');
+           })
+           $('input').dblclick(function () {
+               //    console.log(this);
+               $(this).next().hide('span');
+           })
+           
+       })
+    </script>
+</body>
+
+</html>

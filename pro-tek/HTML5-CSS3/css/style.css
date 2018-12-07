@@ -1,0 +1,212 @@
+
+
+.container{
+    border: 25px solid #153039;
+    width: 1160px;
+    height: 1330px;
+    margin-left: 100px;      
+}
+.baner{
+/*    border: 2px solid red;*/
+    width: 1200px;
+    height: 300px;
+    margin-left: 0px;
+}
+.img1{
+    position: absolute;
+    z-index: 1;
+}
+.imgLogo{
+    position: absolute;
+    z-index: 2;
+    top: 90px;
+}
+.contain{
+/*    border: 2px solid green;*/
+    width: 1150px;
+    height: 900px;
+    margin-left:20px; 
+}
+.first-Contain{
+/*    border: 2px solid blue;*/
+    width: 1150px;
+    height: 170px;  
+}
+.first-Contain-left{
+/*    border: 2px solid red;*/
+    float: left;
+    height: 150px;
+    width: 800px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.first-Contain-right{
+/*    border: 2px solid green;*/
+    height: 160px;
+    width: 300px;
+    float: right;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+.first-Contain-right img{
+    position: relative;
+}
+.search-box{
+/*    border: 2px solid red;*/
+    position: relative;
+    top: -170px;
+    height: 20px;
+    width: 130px;
+    float: left;
+    margin-top: 110px;
+    margin-left: 50px;
+    
+}
+.go-box{
+/*    border: 2px solid blue;*/
+    height: 18px;
+    float: right;
+    width: 40px;
+    margin-top:-60px;
+    margin-right: 76px;
+}
+.about-us{
+/*    border: 2px solid;*/
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+    width: 500px;
+}
+.about-us-left{
+/*    border: 2px solid blue;*/
+    height: 28px;
+    width: 140px;
+    float: left;
+}
+.about-us-left-1{
+/*    border: 2px solid blue;*/
+    height: 25px;
+    width: 18px;
+    margin-left: 0px;
+    float: left;
+}
+.about-us-left-2{
+/*    border: 2px solid blue;*/
+    background-color: #383838;
+    color: #DEDEDE;
+    text-align: center;
+    height: 28px;
+    width: 148px;
+    margin-left: 0px;
+}
+.about-us-right{
+/*    border: 1px solid red;*/
+    float: right;
+    height: 28px;
+    width: 353px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+.about-us-right-1{
+/*    border: 1px solid orange;*/
+    background-color:#DEDEDE ;
+    width: 337px;
+    height: 28px;
+    float: left;
+}
+.about-us-right-2{
+    float: right;
+}
+.second-contant{
+/*    border: 2px solid blue;*/
+    width: 1150px;
+    height: 170px;  
+}
+.what-we-do{
+/*    border: 1px solid red;*/
+    height: 28px;
+    width: 650px;
+    margin-top: 0px;
+}
+.what-we-do-left{
+/*    border: 1px solid red;*/
+    float: left;
+    height: 28px;
+    width: 140px;
+    margin-top: 0px;
+    margin-left: 25px
+}
+.what-we-do-left-1{
+/*    border: 2px solid blue;*/
+    height: 25px;
+    width: 18px;
+    margin-left: 0px;
+    float: left;
+}
+.what-we-do-left-2{
+/*    border: 2px solid blue;*/
+    background-color: #383838;
+    color: #DEDEDE;
+    text-align: center;
+    height: 28px;
+    width: 140px;
+    margin-left: 0px;
+}
+.what-we-do-right{
+/*    border: 1px solid yellow;*/
+    height: 25px;
+    width: 480px;
+    float: right;
+}
+.what-we-do-right-1{
+/*    border: 1px solid orange;*/
+    background-color:#DEDEDE ;
+    height: 28px;
+    width: 460px;
+    float: left;
+    margin-left: -5px;
+}
+.what-we-do-right-2{
+/*    border: 1px solid orange;*/
+    height: 25px;
+    width: 25px;
+    float: right;
+}
+.third-contant{
+/*    border: 2px solid blue;*/
+    width: 1150px;
+    height: 500px;
+}
+.third-headding{
+/*    border: 1px solid red;*/
+    height: 28px;
+    width: 650px;
+    margin-top: 0px;
+}
+.list-item{
+/*    border: 1px solid ;*/
+    height: 120px;
+    
+}
+.list-item-left{
+/*    border: 2px solid red;*/
+    width: 500px;
+    height: 100px;
+    margin-left: 100px;
+    float: left;
+}
+.list-item-right{
+/*    border: 2px solid red;*/
+    width: 400px;
+    height: 100px;
+    margin-left: 100px;
+    float: left;
+}
+
+p{
+    padding-left: 30px;
+}
+ a{
+    color: orangered;
+}
+

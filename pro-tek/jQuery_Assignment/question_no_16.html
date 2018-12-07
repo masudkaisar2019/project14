@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question no 16 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    body{
+        background-color: gray;
+    }
+    #main_div{
+        background-color: lightblue;
+        width: 500px;
+        height: 500px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 100px;
+        margin-left: 400px;
+        border: 2px solid blue;
+
+    }
+</style>
+<body>
+    <h2>Question No 16</h2>
+    <p> Make a button (+) in from of “Expand” option and when you click on + it will have a list under it, once the list shows up
+    the (+) will convert to (-) and “Expand” will chage to “Collaspe”. And once you click on (-) the “collapse ” should go back
+    to “Expand” and it will also hide the list and (-) will change to (+)</p>
+
+    <div id="main_div">
+        <button id="btn1">&#10133;</button>
+        <!-- <button>&#10134;</button> --> <br>
+        <ul id="myUl">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+            <li>Phinaple</li>
+            <li>Orange</li>
+        </ul>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#myUl').hide();
+            $('#btn1').click(function(){
+                $('#myUl').show();
+                $('#btn1').html("&#10134");
+                $('#btn1').click(function(){
+                   $('#myUl').hide(); 
+                    $('#btn1').html("&#10133;");
+                })
+            })
+
+        });
+
+    </script>
+
+</body>
+</html>

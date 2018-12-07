@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: gray;
+        }
+        #main_div{
+            border: 2px solid red;
+            height: 500px;
+            width: 1000px;
+            background-color: lightgray;
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+        #from_div{
+            border: 2px solid blue;
+            height: 450px;
+            width: 450px;
+            float: left;
+            margin-left: 30px;
+            margin-top: 20px;
+            background-color: rgb(122, 224, 255);
+        }
+         #view_div{
+            border: 2px solid blue;
+            height: 450px;
+            width: 450px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h2{
+            text-align: center;
+        }
+        #btn2{
+            visibility: hidden;
+        }
+        p{
+            visibility: hidden;
+        }
+        span{
+             visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_div">
+        <div id="from_div">
+            <h2>Fill up to the form with validation</h2>
+            <form action="" id="demo_form">
+            <label for="fname">First Name</label>
+            <input type="text" placeholder="Enter First Name" value="" id="fname">
+            <label for="lname">First Name</label>
+            <input type="text" placeholder="Enter First Name" value="" id="lname"><br><br>
+            <label for="">Gender</label>
+            <input type="radio" value="male" name="gender" class="gender"> Male
+            <input type="radio" value="female" name="gender" class="gender"> Female <br><br>
+        <label for="">State</label>
+            <select id="state">
+                <option value="california">California</option>
+                <option value="florida">Florida</option>
+                <option value="newYork"> New York</option>
+            </select>
+            <button id="btn1">save</button>
+            </form>
+        </div>
+        <div id="view_div">
+            <h3> My form data</h3>
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <button id="btn2">Edit</button>
+
+
+        </div>
+    </div>
+
+
+
+<script>
+    $(document).ready(function(){
+        $('#btn1').click(function(e){
+            e.preventDefault();
+              
+            var fname = $('#fname').val();
+            var lname = $('#lname').val();
+            var gender = $('form input[type=radio]:checked').val();
+            var state = [];
+            $.each($("#state option:selected"), function () {
+                state.push($(this).val());
+            });
+            $('p').css('visibility', 'visible');
+            $('#btn2').css('visibility', 'visible');
+            $('#p1').html("First Name :"+fname);
+            $('#p2').html("Last Name :"+lname);
+            $('#p3').html("Gender :"+gender);
+            $('#p4').html("State :"+state);
+            $('#demo_form').trigger("reset");      
+        });
+
+        //To Edit data in the field 
+
+        $('#btn2').click(function(){
+            
+            var firstName = $('#p1').html();
+            $("#fname").val(firstName);
+            $('#p1').hide();
+            var lastName = $('#p2').html();
+            $('#lname').val(lastName);
+            $('#p2').hide();
+            $("input:radio").attr("checked", false);
+            $('#p3').hide();
+            $('#p4').hide();
+            $('#btn2').hide();
+
+
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
+
+

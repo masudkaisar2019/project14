@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Rectangles</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+		height: 400px;
+		width: 400px;
+/*		border: 2px solid red;*/
+		float: left;
+		box-sizing: border-box;
+		margin-left:300px;
+		margin-top: 200PX;
+      }
+		
+		#question {
+			
+			height: 400px;
+			width: 400px;
+/*			border: 2px solid blue;*/
+			float: left;
+			margin-left: 20px;
+			background-color: darkkhaki;
+			padding: 10px;
+			box-sizing: border-box;
+			margin-top: 200PX;
+      }
+      h2{ color: white;
+
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		  background-color: darkgray;
+		
+      }
+		#q1,#q2,#q3{
+			background-color: deepskyblue;
+		}
+		#result{
+			background-color: gray;
+			color: white;
+		}
+    </style>
+
+  </head>
+  <body>
+    <!-- to show our maps -->
+    <div id="map">
+        
+    </div>
+    <!-- To show our question -->
+    <div id="question">
+    <h2>Map Quiz Please click on the map the location of:</h2>
+    	<p id="q1"></p>
+    	<p id="a1"></p>
+    	<p id="q2"></p>
+    	<p id="a2"></p>
+    	<p id="q3"></p>
+    	<p id="a3"></p>
+    	<p id="result"></p>
+    </div>
+    
+    
+    
+  <script>
+
+      // This example adds a red rectangle to a map.
+      //Start the function to display maps
+
+      function initMap() {
+		  document.getElementById("q1").innerHTML= "Question No 1: Where is your office location?"
+		  
+          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 33.678, lng: -116.243},
+          mapTypeId: 'terrain',
+		  zoomControl: false,
+		  scaleControl: true
+		});
+		  
+	
+		 //Draw rectangle in the maps------------------------------------------
+          var rectangle_office = new google.maps.Rectangle({
+			  visible:false,
+			  strokeColor: '#FF0000',
+			  strokeOpacity: 0.8,
+			  strokeWeight: 2,
+			  fillColor: '#FF0000',
+			  fillOpacity: 0.35,
+
+			  map: map,
+			  bounds: {
+				north: 33.685,
+				south: 33.671,
+				east: -116.234,
+				west: -116.251
+			  }
+			});
+		  
+		  
+		  var rectangle1_home = new google.maps.Rectangle({
+			    visible:false,
+				strokeColor: '#FF0000',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: '#FF0000',
+				fillOpacity: 0.35,
+				map: map,
+				bounds: {
+				  north: 33.703,
+				  south: 33.690,
+				  east:  -116.231,
+				  west: -116.248
+				}
+				
+		    });
+		  
+		  var rectangle1_college = new google.maps.Rectangle({
+			  	visible:false,
+				strokeColor: '#FF0000',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: '#FF0000',
+				fillOpacity: 0.35,
+				map: map,
+				bounds: {
+				  north: 33.675,
+				  south: 33.695,
+				  east:  -116.200,
+				  west:  -116.223
+				}
+				
+			});
+
+        //----------------------------------------------------------------------------------
+		  var i=0; 
+		  var count= 0; 
+		  var result_correct = 0; 
+		  var result_wrong = 0;
+		  
+		
+		//-----------------	--------------------------------------------------------------------
+
+        //Add click event listener in the maps
+
+		  google.maps.event.addListener(map,'click',function(e){
+			  
+			  if(count==0){
+				//   console.log("first")
+					// console.log(count);
+					if(rectangle_office.getBounds().contains(e.latLng)){
+						rectangle_office.fillColor='green';
+						rectangle_office.strokeColor='green';
+						rectangle_office.setVisible(true);
+						document.getElementById("a1").innerHTML = "You have the correct answer";
+						count = count +1;
+						result_correct++;
+					    document.getElementById("q2").innerHTML = 'Question no 2: Where is your Home?';
+						
+				    }
+                    else{
+					 
+					 console.log(count);
+					rectangle_office.fillColor='red';
+					 rectangle_office.strokeColor='red';
+					 rectangle_office.setVisible(true);
+      				// count = count +1;
+					 result_wrong = result_wrong + 1;
+					 document.getElementById("a1").innerHTML = "You have the Wrong answer";
+					 document.getElementById("q2").innerHTML = 'Question no 2: Where is your Home?';
+					 count = count +1;
+					 
+				    }
+				    return;
+			    }
+//		  });
+			//----------------------------------------------------------------------------			
+
+		        else if(count==1) {
+
+			        if(rectangle1_home.getBounds().contains(e.latLng)){
+
+
+							rectangle1_home.fillColor='green';
+				  
+							rectangle1_home.strokeColor='green';
+				  
+							rectangle1_home.setVisible(true);
+				  
+							document.getElementById("a2").innerHTML = "You have the correct answer";
+				  
+							count = count +1;
+				  
+							result_correct = result_correct + 1;
+				  
+							 document.getElementById("q3").innerHTML = 'Question no 3: Where is your college?';
+				  
+			  		}
+
+					else{
+						 
+						 console.log(count);
+						rectangle1_home.fillColor='red';
+						 rectangle1_home.strokeColor='red';
+						 rectangle1_home.setVisible(true);
+						 count = count +1;
+						 result_wrong = result_wrong + 1;
+						 document.getElementById("a2").innerHTML = "You have the Wrong answer"
+						 document.getElementById("q3").innerHTML = 'Question no 3: Where is your college?';
+					}	
+				
+				    return;
+				}
+			//-------------------------------------------------------------------------------	
+				else if(count==2){
+						// console.log("if second"+count);
+						if(rectangle1_college.getBounds().contains(e.latLng)){
+								rectangle1_college.fillColor='green';
+								rectangle1_college.strokeColor='green';
+								rectangle1_college.setVisible(true);
+								document.getElementById("a3").innerHTML = "You have the correct answer"
+//								count = count +1;
+								result_correct = result_correct + 1;
+						}
+                        else{
+							 console.log("else second"+count);
+							rectangle1_college.fillColor='red';
+							 rectangle1_college.strokeColor='red';
+							 rectangle1_college.setVisible(true);
+//							 count = count +1;
+							 result_wrong = result_wrong + 1;
+							 document.getElementById("a3").innerHTML = "You have the Wrong answer"
+						}	
+						
+						document.getElementById("result").innerHTML = "You have " + result_correct + " correct Answer and " + result_wrong + " Wrong answer";
+						return;
+				
+				}
+			  
+			  		
+			});	
+		}
+      
+      
+    </script>
+    
+    
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYE6spo_69ZNS-TMQlIFLB5t2K6MdKqrU&callback=initMap">
+    </script>
+  </body>
+</html>

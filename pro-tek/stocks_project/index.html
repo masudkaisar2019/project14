@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: lightblue;
+        text-align: center;   
+    }
+    #Display_my_Stock{
+        text-align: center;
+        margin-left: 25%;
+        float: left;
+    }
+    #Display_my_input_stock{
+        /* border: 2px solid red; */
+        height: 200px;
+        width: 200px;
+        float: left;
+    }
+    
+    </style>
+
+
+</head>
+<body onload="loadDoc()">
+    <h2>Welcome to my Stock Assignment</h2>
+    Input Company Name : <input type="text" id="my_input_data" value="">
+     <button onclick="addData()">Add</button> <hr><hr><br><br><br>
+
+    <div id="Display_my_Stock"> 
+      
+    </div>
+    
+
+
+
+    <script src="stock.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</body>
+</html>

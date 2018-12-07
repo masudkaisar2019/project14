@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 21</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+       body{
+           background-color: lightgray;
+       }
+       #main_div{
+           border: 2px solid gray;
+           box-sizing: border-box;
+           width: 700px;
+           height: 500px;
+           margin: auto;
+       }
+       #btn_div{
+           margin: auto;
+           width: 200px;
+           margin-top: 20px;
+       }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Have a set of six pictures with previous and next button, buttons should change the images to previous or next image.</h1>
+    <div id="main_div">
+        <img src="" alt="" width="700" height="500">
+
+    </div>
+    <div id="btn_div">
+        <button id="preview">Preview</button>
+        <button id="next">Next</button>
+    </div>
+   
+
+    <script>
+        $(document).ready(function(){
+            var my_images= ['images/developer_1.jpg', 'images/developer_2.jpg','images/developer_3.jpg', 'images/developer_4.jpg', 'images/developer_5.jpg']
+            console.log(my_images);
+            var count= 0;
+            $('img').attr('src', my_images[0]);
+            $('#preview').on('click',function(){
+                count = (count + my_images.length -1)% (my_images.length);
+                console.log(my_images[count]);
+                $('img').attr('src',my_images[count]);
+                
+            })
+            $('#next').click(function(){
+                 count = (count + my_images.length +1) % (my_images.length);
+                console.log(my_images[count]);
+                $('img').attr('src', my_images[count]);
+            })
+            
+        })
+
+    </script>
+</body>
+
+</html>

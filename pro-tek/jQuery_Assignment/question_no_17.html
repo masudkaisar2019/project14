@@ -1,0 +1,73 @@
+<!-- There is a div with id=”main” and it contains a table as follows. Complete the equations. [Hint use eq(), $(this) and $each()
+] #main Div
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 17</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+        <table border="2">
+            <thead>
+                <tr>
+                    <th >num 1</th>
+                    <th >Operant</th>
+                    <th >num 2</th>
+                    <th >Equel to</th>
+                    <th >Answer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="gray">42</td>
+                    <td class="gray"> + </td>
+                    <td class="gray">12</td>
+                    <td class="gray"> = </td>
+                    <td class="result"> ?</td>
+                </tr>
+                <tr>
+                    <td class="gray">15</td>
+                    <td class="gray"> + </td>
+                    <td class="gray">87</td>
+                    <td class="gray"> = </td>
+                    <td class="result"> ?</td>
+                </tr>
+                <tr>
+                    <td class="gray">102</td>
+                    <td class="gray"> + </td>
+                    <td class="gray">25</td>
+                    <td class="gray"> = </td>
+                    <td class="result"> ?</td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+    <script>
+      $(document).ready(function(){
+          $('thead').css('background-color','yellow');
+          $('.gray').css('background-color','lightgray');
+
+          $('tbody tr').each(function(){     
+                var num1=parseFloat($(this).children().first().text());
+                var num2= parseFloat($(this).children().eq(2).text());
+                var sum =  num1 + num2;
+                $(this).children().eq(4).html(sum);
+            }) 
+
+        });
+    </script>
+</body>
+</html>

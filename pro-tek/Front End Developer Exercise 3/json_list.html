@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="our_json.json"></script>  
+        <title>my new json </title>   
+        <link rel="stylesheet" href="json.css">
+    </head>
+    
+
+    
+    <body onload="load()">
+    <h1>Task Tracker</h1>
+    <div id="left_data">
+       <h3>Create a Task</h3>
+       <form action="">
+          Task Name: <br> <input id="task_name" type="text" value=""><br><br>
+          Date: <br> <input id="task_id" type="text" value=""><br><br>
+          Assigned To: <br> <input id="task_assigned" type="text" value=""><br>
+          <input type="button" onclick="post()" id="btn" value="Submit">
+       </form>
+        
+        
+    </div>
+    <div id= "right_data">
+        <h2>Existing Task</h2>
+        <div id="Existing_Task">
+
+        </div>
+
+   
+   <script src="json_list.js"></script>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2> Question No 13: </h2>
+    <p>3) Have two buttons - "CHECK URL" and "ADD LINK". The button "ADD LINK" should be disabled by default. Have 5 anchor tags
+    which are linked to your favorite websites. Now on a click of "CHECK URL" button, check to see if "http://www.pro-tekconsulting.com"
+    is included in these 5 anchors tags or not. If NO, then enable "ADD LINK" button. When you click on this "ADD LINK" button,
+    Pro-Tek wesbite link should be added to the DOM. o Hint: Use $.each()</p>
+
+    <div id="main_div">
+        <h2>Filterable Table</h2>
+        <p>Type something in the input field to search the table by name or website:</p>
+        <input id="myInput" type="text" placeholder="Search..">
+        <br>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name Company</th>
+                    <th>WebSite</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>Facebook</td>
+                    <td><a href="http://www.facebook.com">facebook</a></td>
+                </tr>
+                <tr>
+                    <td>google</td>
+                    <td>
+                        <a href="https://www.google.com/">Google</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>YouTube</td>
+                    <td>
+                        <a href="https://www.youtube.com/">YouTube</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>W3School</td>
+                    <td>
+                        <a href="https://www.w3schools.com/">W3School</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pizza Hut</td>
+                    <td>
+                        <a href="https://www.pizzahut.com/">Pizza Hut</a>
+                    </td>
+                </tr>
+                <tr id="tr">
+                    <td>Pro-tec</td>
+                    <td>
+                        <a href="https://www.pizzahut.com/">Pizza Hut</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="btn1">ADD LINK</button>
+
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

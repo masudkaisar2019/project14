@@ -1,0 +1,74 @@
+<!-- Make 3 input fields to enter the phone number. After filling the first three digits in FIRST FIELLD the cursor should automatically
+move on to the second field and when the second field is filled, it should move to the third field -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuary Assignment question no 17</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color:yellowgreen;
+        }
+    #main_div{
+        width:500px;
+        height: 200px;
+        border: 2px solid gray;
+        background-color: lightgray;
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 200px;
+    }
+    form{
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    form input{
+        height: 50px;
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Make 3 input fields to enter the phone number. After filling the first three digits in FIRST FIELLD the cursor should automatically
+    move on to the second field and when the second field is filled, it should move to the third field</h1>
+    <div id="main_div">
+        <form action="">
+            <input id="firstInput" type="number" maxlength="3" autofocus>
+            <input id="secondInput" type="number" maxlength="3">
+            <input id="thirdInput" type="number" maxlength="4">
+        </form>  
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('input').keydown(function(){
+               
+                var firstInput = $('#firstInput').val().length;
+                var secondInput = $('#secondInput').val().length;
+                var thirdInput = $('#thirdInput').val().length;
+                // console.log(firstInput)
+                if (firstInput == 3) {
+                    $('#secondInput').focus();
+                }
+                console.log("I am second"+secondInput);
+                if (secondInput == 3) {
+                    $('#thirdInput').focus();
+                }
+                if (thirdInput == 4) {
+                    alert("Valid number")
+                }
+            })   
+        })
+           
+    </script>
+</body>
+
+</html>
