@@ -1,0 +1,44 @@
+#the-basics{
+    font-size: 3em;
+}
+#the-basics input{
+    margin-left: 50px;
+}
+.tt-suggestion .tt-selectable{
+     margin-left: 0px;
+    
+}
+pre{
+    padding-left: 30px;
+}
+/*
+.tt-open{
+    padding-left:0px;
+    border: solid red;
+}
+*/
+
+.tt-menu{
+    width: 450px;
+    border: solid black;
+/*    padding-left:50px;*/
+    margin-top: 20px;
+    margin-left: 50px;
+}
+/*
+.tt-open:hover{
+    background-color: blue;
+color:white;}
+*/
+.tt-selectable:hover{
+    background-color: blue;
+    color:white;
+}
+
+
+
+
+.typeahead .tt-hint:hover{
+    background-color: blue;
+    color: white;
+}

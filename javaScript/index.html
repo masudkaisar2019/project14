@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Prsctice</title>
+    
+</head>
+<body>
+    <h1 id="changeColor">This is my first web page</h1>
+    <h2>This is my second web page</h2>
+    <h6>This is my new web page</h6>
+    <button tupe="button"
+    onMouseOver ="document.getElementById('changeColor').style.color= 'red' "
+    >OnMouseOver Button</button>
+
+    
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis quae magnam nihil alias voluptate, eligendi? <br>
+    Eveniet praesentium, tempora fugit.</p>
+
+
+
+    <ul id="change">
+        <li>This is my first list item</li>
+        <li>This is my second list item</li>
+        <li>This is my third list item</li>
+
+    </ul>   
+    
+<div id="test">
+    <form id="myForm" action ="#">
+        First Name: <input type="text" name="fname" value="test"><br>
+        Last Name: <input type="text" name="lname" value="test"><br><br>
+        <button onclick="myFunction()">getValue</button>
+        
+    </form>
+</div>
+<div>
+<h3 id="getValue"></h3>    
+</div>
+<div onMouseDown="mDown(this)" onMouseUp="mUp(this)"
+   style="background-color: red; width: 100px; height: 30px; padding: 30px" >
+    Hey! Click me
+</div>
+<!-- this script got from www.javascriptfreecode.com-Coded by: Krishna Eydat -->
+<!-- Print Page Script
+Use this script to have your
+users print your HTML page
+-->
+<SCRIPT LANGUAGE="JavaScript">
+if (window.print) {
+document.write('<form> '
++ '<input type=button name=print value="Click" '
++ 'onClick="javascript:window.print()"> To Print this page!</form>');
+}
+// End -->
+</script>
+
+
+<font face="Tahoma"><a target="_blank" href="http://www.javascriptfreecode.com/"><span style="font-size: 8pt; text-decoration: none">JavaScript Free Code</span></a></font>
+
+
+<script src="newDome.js"></script>
+</body>
+</html>

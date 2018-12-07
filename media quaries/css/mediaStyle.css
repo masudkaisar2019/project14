@@ -1,0 +1,25 @@
+.green{
+    background-color: red;
+    height: 100vh;
+}
+
+@media (max-width: 575px){
+    .green{
+    background-image: url(/images/cat3.jpg);
+    height: 100vh;       
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .green{
+    background-image: url(/images/cat1.jpg);
+    height: 100vh;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .green{
+    background-image: url(/images/cat2.jpg);
+    height: 100vh;
+}
+}
